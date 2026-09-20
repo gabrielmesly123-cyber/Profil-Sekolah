@@ -1,0 +1,490 @@
+/* ==========================================================================
+   SMA Marsudirini Bekasi - Main Stylesheet
+   Color Palette:
+   - Primary: #3368A0
+   - Secondary: #66A3BF
+   - Accent: #C8DFDB
+   - Neutral BG: #F2EFE7
+   ========================================================================== */
+
+/* 1. CSS Custom Properties / Root Variables */
+:root {
+  --primary-color: hsl(211, 52%, 41%);
+    --primary-color2:rgb(143, 187, 235);
+
+  --primary-hover: #6696ca;
+  --highlight-color: #d9c052;
+  --secondary-color: hsl(199, 41%, 57%, 0.5);
+    --secondary-color2: hsla(199, 81%, 78%, 0.5);
+
+  --secondary-hover: hsl(199, 35%, 47%);
+  --accent-color: #e2fffa;
+    --accent-color2: #d3f0f1;
+    --accent-color3: #ddeeff;
+
+  --accent-hover: #b1ddd6;
+  --accent-hover2: #faffee;
+
+  --accent-dark: #122c47;
+  --bg-light: #f2efe7;
+  --text-dark: #2b2b2b;
+  --text-muted: #6c757d;
+  --white: #ffffff;
+  --brokenwhite: #fffdf9d3;
+  --font-main: "Segoe UI", system-ui, -apple-system, sans-serif;
+  --transition-speed: 0.3s;
+}
+
+
+/* 2. Global Resets & Typography */
+html,body {
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  font-family: var(--font-main);
+  line-height: 1.6;
+  overflow-x: clip;
+}
+
+a {
+  text-decoration: none;
+  transition: color var(--transition-speed) ease;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.footer{
+    color: var(--brokenwhite);
+}
+
+.highlight {
+  display: inline-block;
+  padding: 0.45rem 1.5rem;
+  color: white;
+  background-color: var(--primary-color2);
+  border-radius: 0px;
+  box-shadow: 0 0px 1cap var(--secondary-color);
+  transition: 0.3s;
+}
+.highlight:hover{
+  display: inline-block;
+  padding: 0.45rem 1.5rem;
+  background-color: var(--accent-hover);
+  border-radius: 0px;
+  box-shadow: 0 0px 1cap var(--secondary-color);
+}
+
+
+/* 3. Color Utility Classes */
+.bg-primary-custom {
+  background-color: var(--primary-color) !important;
+}
+.bg-secondary-custom {
+  background-color: var(--secondary-color) !important;
+}
+.bg-accent-custom {
+  background-color: var(--accent-color) !important;
+}
+.bg-light-custom {
+  background-color: var(--bg-light) !important;
+}
+
+.text-primary-custom {
+  color: var(--primary-color) !important;
+}
+.text-secondary-custom {
+  color: var(--secondary-color) !important;
+}
+.text-accent-custom {
+  color: var(--accent-color) !important;
+}
+
+/* 4. Custom Buttons */
+.btn-primary-custom {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  font-weight: 600;
+  transition: all var(--transition-speed) ease;
+}
+
+.btn-primary-custom:hover {
+  background-color: var(--primary-hover);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(51, 104, 160, 0.3);
+}
+
+.btn-accent-custom {
+  background-color: var(--accent-color);
+  color: var(--accent-dark);
+  border: none;
+  font-weight: 600;
+  transition: all var(--transition-speed) ease;
+}
+
+.btn-accent-custom:hover {
+  background-color: var(--accent-hover2);
+  color: var(--accent-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-outline-light {
+  transition: background-color var(--transition-speed) ease,
+    color var(--transition-speed) ease,
+    border-color var(--transition-speed) ease,
+    transform var(--transition-speed) ease,
+    box-shadow var(--transition-speed) ease;
+}
+
+.btn-outline-light:hover {
+  transform: translateY(-2px);
+}
+
+/* 5. Navigation Bar */
+#navbar-placeholder {
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7);
+}
+
+.navbar {
+  padding: 0.8rem 1rem;
+  transition: background-color var(--transition-speed) ease;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0);
+}
+
+.navbar-brand img {
+  margin-right: 7pt;
+}
+
+.navbar-nav .nav-link {
+  font-weight: 500;
+  padding: 0.5rem 1rem !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+  transition: color var(--transition-speed) ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: var(--accent-color) !important;
+}
+
+/* 6. Hero Section */
+.hero-section {  
+  position: relative;
+  overflow: hidden;
+  color: var(--white);
+  padding: 110px 0 90px 0;
+}
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      0deg,
+      var(--accent-dark) 2%,
+      rgba(26, 57, 89, 0.72) 3%,
+      rgba(26, 57, 89, 0) 22%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(51, 104, 160, 0.88),
+      rgba(26, 57, 89, 0.45)
+    );
+}
+
+.hero-section > .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-carousel,
+.hero-carousel .carousel-inner,
+.hero-carousel .carousel-item {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-carousel {
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-carousel .carousel-indicators {
+  z-index: 3;
+  margin-bottom: 1.25rem;
+  pointer-events: auto;
+}
+
+.hero-carousel .carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 0;
+  opacity: 0.65;
+}
+
+.hero-carousel .carousel-indicators .active {
+  opacity: 1;
+}
+
+.hero-carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-section h1 {
+  color: var(--white);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* 7. Cards & Modules */
+.card {
+  border: none;
+  border-radius: 12px;
+  background-color: var(--white);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  transition: transform var(--transition-speed) ease,
+    box-shadow var(--transition-speed) ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(51, 104, 160, 0.12);
+}
+
+.visi-card,
+.misi-card {
+  border-left: 5px solid transparent !important;
+  box-shadow: 0px -10px 3px -8px var(--accent-dark)inset !important;
+}
+.visi-card{
+  background-color: var(--primary-color2);
+}
+.misi-card{
+  background-color: var(--secondary-color2);
+}
+
+.visi-card:hover {
+  border-left-color: var(--primary-color) !important;
+}
+
+.misi-card:hover {
+  border-left-color: var(--secondary-color) !important;
+}
+
+.card-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.card-img-top {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+/* 8. Callout Bar */
+.py-4.bg-accent-custom {
+  border-bottom: 2px solid rgba(51, 104, 160, 0.1);
+}
+
+/* 9. Footer */
+footer {
+  border-top: 4px solid var(--secondary-color);
+}
+
+footer a {
+  transition: opacity var(--transition-speed) ease;
+}
+
+footer a:hover {
+  opacity: 1 !important;
+  color: var(--accent-color) !important;
+}
+
+footer .bi {
+  transition: transform var(--transition-speed) ease;
+}
+
+footer a:hover .bi {
+  transform: scale(1.2);
+}
+.badge {
+  background-color: hsl(199, 35%, 47%,0.5);
+}
+.daftar{
+  background: repeating-linear-gradient(
+    90deg,
+    var(--accent-color) 0%,
+    var(--accent-color2) 12.5%,
+    var(--accent-color3) 25%,
+    var(--accent-color2) 37.5%,
+    var(--accent-color) 50%
+  );
+  background-size: 200% 100%;
+  animation: slide-right 7s linear infinite;
+}
+.box{
+  width: 100%;
+  min-height: 120px;
+  background: linear-gradient(
+    180deg,
+    var(--primary-color)70%,
+    hsl(200, 58%, 37%)100%
+  );
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 110px 1fr 70px;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 7%;
+  color: var(--white);
+  border-bottom: 4px solid var(--secondary-color2) ;
+  box-shadow: 0 10px 20px var(--accent-dark) inset;
+  transition: min-height 0.3s ease, background-color 0.3s ease;
+}
+.boxk{
+  width: 100%;
+  height: 250px;
+  text-shadow: 0px 1.5px 8px var(--primary-color);
+  background: linear-gradient(
+    178deg,
+    white 10%,
+    var(--secondary-color2)50%,
+    var(--accent-color3)100%
+  );
+    overflow: hidden;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.boxk .box-title h2{
+  margin: 0;
+  font-size: 40px;
+    transform: translateY(12px);
+
+}
+.box-number{
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 1;
+  text-shadow: 2px 3px 4px var(--accent-dark);
+  transition: 0.2s;
+}
+.box-content{
+  max-width: 900px;
+}
+.box .box-title{
+  height: 100px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-shrink: 0;
+  text-shadow: 2px 3px 4px var(--accent-dark);
+}
+.box .box-title h2{
+  margin: 0;
+  font-size: 2rem;
+}
+.box .box-dropdown{
+  max-width: 900px;
+  margin: -1.25rem 0 0;
+  padding: 0;
+  font-size: 1.15rem;
+  font-weight: 500;
+  line-height: 1.55;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.box-arrow{
+  justify-self: end;
+  color: var(--white);
+  font-size: 2rem;
+  transition: transform 0.3s ease;
+}
+.box:hover{
+  min-height: 210px;
+}
+.box:hover .box-dropdown{
+  opacity: 1;
+  transform: translateY(0);
+}
+.box:hover .box-arrow{
+  transform: rotate(180deg);
+}
+.box:hover .box-number{  
+  font-size: 4.5rem;
+  text-shadow: 2px 3px 8px var(--accent-dark);
+}
+/* 10. Responsive Tweaks */
+@media (max-width: 991.98px) {
+  .hero-section {
+    padding: 70px 0;
+    text-align: center;
+  }
+
+  .navbar-collapse {
+    background-color: var(--primary-color);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 0.5rem;
+  }
+
+  .box {
+    grid-template-columns: 70px 1fr 32px;
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+
+  .box-number {
+    font-size: 3rem;
+  }
+
+  .box .box-title h2 {
+    font-size: 1.4rem;
+  }
+
+  .box .box-dropdown {
+    font-size: 1rem;
+  }
+}
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px); 
+  }
+  100% {
+    transform: translateY(0px); 
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
