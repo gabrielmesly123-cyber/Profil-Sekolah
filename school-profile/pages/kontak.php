@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak Kami - SMA Marsudirini Bekasi</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Custom CSS (path ../ karena file di dalam folder pages/) -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+    <!-- Placeholder Navbar -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Page Header (Hero Banner Kecil) -->
+    <header class="jurusan text-white text-center py-5 ">
+        <div class="container pt-4 pb-2">
+            <h1 class="display-5 fw-bold mb-3 text-white"  style="text-shadow: 0 2px 5px #122c47 ;">Hubungi Kami</h1>
+            <p class="lead text-white-50 mb-0">Kami siap melayani dan menjawab setiap pertanyaan Anda seputar SMA Marsudirini Bekasi.</p>
+        </div>
+    </header>
+
+    <!-- Informasi Kontak & Formulir -->
+    <section class="kontak py-5">
+        <div class="container py-4">
+            <div class="row g-5">
+                
+                <!-- Kolom Kiri: Informasi Kontak -->
+                <div class="col-lg-5">
+                    <div class="mb-4">
+                        <h3 class="fw-bold text-primary-custom">Informasi Sekolah</h3>
+                        <p class="text-muted">Jangan ragu untuk menghubungi kami melalui kontak di bawah ini atau datang langsung ke kampus kami.</p>
+                    </div>
+
+                    <!-- List Informasi -->
+                    <div class="d-flex align-items-start mb-4">
+                        <div class="contact-icon flex-shrink-0 rounded-circle text-primary-custom">
+                            <i class="bi bi-geo-alt-fill fs-4"></i>
+                        </div>
+                        <div class="ms-4 mt-2">
+                            <h5 class="fw-bold mb-1">Alamat Kampus</h5>
+                            <p class="text-muted mb-0">Jl. Raya Narogong No.202, Kemang Pratama, Rawalumbu, Kota Bekasi, Jawa Barat 17116</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-start mb-4">
+                        <div class="contact-icon flex-shrink-0 rounded-circle text-primary-custom">
+                            <i class="bi bi-telephone-fill fs-4"></i>
+                        </div>
+                        <div class="ms-4 mt-2">
+                            <h5 class="fw-bold mb-1">Telepon</h5>
+                            <p class="text-muted mb-0">(021) 82410112</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-start mb-4">
+                        <div class="contact-icon flex-shrink-0 rounded-circle text-primary-custom">
+                            <i class="bi bi-envelope-fill fs-4"></i>
+                        </div>
+                        <div class="ms-4 mt-2">
+                            <h5 class="fw-bold mb-1">Email Resmi</h5>
+                            <p class="text-muted mb-0">info@smamarsudirini-bks.sch.id</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-start mb-4">
+                        <div class="contact-icon flex-shrink-0 rounded-circle text-primary-custom">
+                            <i class="bi bi-clock-fill fs-4"></i>
+                        </div>
+                        <div class="ms-4 mt-2">
+                            <h5 class="fw-bold mb-1">Jam Operasional</h5>
+                            <p class="text-muted mb-0">Senin - Jumat: 07.00 - 15.00 WIB</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kolom Kanan: Formulir Kontak -->
+                <div class="col-lg-7">
+                    <div class=" border-0 shadow-sm rounded-1 p-4 p-md-5 h-100" style="background-color: white ;">
+                        <h4 class="fw-bold text-primary-custom mb-4">Kirim Pesan</h4>
+                        
+                        <!-- Form dimulai di sini -->
+                        <!-- Ubah action mengarah ke file pemroses -->
+                        <form action="proses-kontak.php" method="POST">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="nama" class="form-label fw-semibold text-dark">Nama Lengkap <span class="text-danger">*</span></label>
+                                    <!-- Tambahkan name="nama" -->
+                                    <input type="text" name="nama" class="form-control form-control-lg bg-light" id="nama" required>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label fw-semibold text-dark">Alamat Email <span class="text-danger">*</span></label>
+                                    <!-- Tambahkan name="email" -->
+                                    <input type="email" name="email" class="form-control form-control-lg bg-light" id="email" required>
+                                </div>
+                                
+                                <div class="col-12">
+                                    <label for="subjek" class="form-label fw-semibold text-dark">Subjek Pesan <span class="text-danger">*</span></label>
+                                    <!-- Tambahkan name="subjek" -->
+                                    <input type="text" name="subjek" class="form-control form-control-lg bg-light" id="subjek" required>
+                                </div>
+                                
+                                <div class="col-12">
+                                    <label for="pesan" class="form-label fw-semibold text-dark">Isi Pesan <span class="text-danger">*</span></label>
+                                    <!-- Tambahkan name="pesan" -->
+                                    <textarea name="pesan" class="form-control form-control-lg bg-light" id="pesan" rows="5" required></textarea>
+                                </div>
+                                
+                                <div class="col-12 mt-4">
+                                    <button type="submit" name="submit_pesan" class="btn btn-primary-custom btn-lg w-100 fw-bold">
+                                        <i class="bi bi-send-fill me-2"></i> Kirim Pesan Sekarang
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- Form selesai -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Maps Section -->
+    <section class="pb-0">
+        <div class="container-fluid px-0">
+            <!-- Embed Google Maps -->
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.027048325603!2d106.99464671476932!3d-6.260172995468798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698d9ab38b814d%3A0x6b4a559bf70d04db!2sSMA%20Marsudirini%20Bekasi!5e0!3m2!1sid!2sid!4v1690000000000!5m2!1sid!2sid" 
+                width="100%" 
+                height="450" 
+                style="border:0; display: block;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </section>
+
+    <!-- Placeholder Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Bootstrap 5 JS Bundle & Custom JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/app.js"></script>
+</body>
+</html>

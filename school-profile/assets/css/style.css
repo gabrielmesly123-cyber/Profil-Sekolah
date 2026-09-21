@@ -436,6 +436,42 @@ footer a:hover .bi {
   font-size: 4.5rem;
   text-shadow: 2px 3px 8px var(--accent-dark);
 }
+
+.jurusan{
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  min-height: 120px;
+  background: linear-gradient(
+    180deg,
+    var(--primary-color) 70%,
+    hsl(200, 58%, 37%) 100%
+  );
+  box-shadow: 0 0px 20px var(--accent-dark);
+}
+
+.contact-icon {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
+  box-shadow: 1.5px 3px 5px rgba(26, 57, 89, 0.28);
+}
+
+.contact-icon i {
+  line-height: 1;
+}
+
+.kontak{
+  background: linear-gradient(
+    170deg,
+    white 60%,
+    var(--bg-light) 100%
+  );
+}
+
 /* 10. Responsive Tweaks */
 @media (max-width: 991.98px) {
   .hero-section {
