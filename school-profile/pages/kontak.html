@@ -85,39 +85,39 @@
                         
                         <!-- Form dimulai di sini -->
                         <!-- Ubah action mengarah ke file pemroses -->
-                        <form action="proses-kontak.php" method="POST">
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <label for="nama" class="form-label fw-semibold text-dark">Nama Lengkap <span class="text-danger">*</span></label>
-                                    <!-- Tambahkan name="nama" -->
-                                    <input type="text" name="nama" class="form-control form-control-lg bg-light" id="nama" required>
-                                </div>
-                                
-                                <div class="col-md-6">
-                                    <label for="email" class="form-label fw-semibold text-dark">Alamat Email <span class="text-danger">*</span></label>
-                                    <!-- Tambahkan name="email" -->
-                                    <input type="email" name="email" class="form-control form-control-lg bg-light" id="email" required>
-                                </div>
-                                
-                                <div class="col-12">
-                                    <label for="subjek" class="form-label fw-semibold text-dark">Subjek Pesan <span class="text-danger">*</span></label>
-                                    <!-- Tambahkan name="subjek" -->
-                                    <input type="text" name="subjek" class="form-control form-control-lg bg-light" id="subjek" required>
-                                </div>
-                                
-                                <div class="col-12">
-                                    <label for="pesan" class="form-label fw-semibold text-dark">Isi Pesan <span class="text-danger">*</span></label>
-                                    <!-- Tambahkan name="pesan" -->
-                                    <textarea name="pesan" class="form-control form-control-lg bg-light" id="pesan" rows="5" required></textarea>
-                                </div>
-                                
-                                <div class="col-12 mt-4">
-                                    <button type="submit" name="submit_pesan" class="btn btn-primary-custom btn-lg w-100 fw-bold">
-                                        <i class="bi bi-send-fill me-2"></i> Kirim Pesan Sekarang
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
+                        <!-- Form updated for Web3Forms (No PHP required) -->
+<form action="https://api.web3forms.com/submit" method="POST">
+    <!-- Paste your free access key from web3forms.com here -->
+    <input type="hidden" name="access_key" value="f3a841dc-04f5-45c7-b034-3ce8d3a7c94e">
+
+    <div class="row g-3">
+        <div class="col-md-6">
+            <label for="nama" class="form-label fw-semibold text-dark">Nama Lengkap <span class="text-danger">*</span></label>
+            <input type="text" name="nama" class="form-control form-control-lg bg-light" id="nama" placeholder="Masukkan nama Anda" required>
+        </div>
+        
+        <div class="col-md-6">
+            <label for="email" class="form-label fw-semibold text-dark">Alamat Email <span class="text-danger">*</span></label>
+            <input type="email" name="email" class="form-control form-control-lg bg-light" id="email" placeholder="nama@email.com" required>
+        </div>
+        
+        <div class="col-12">
+            <label for="subjek" class="form-label fw-semibold text-dark">Subjek Pesan <span class="text-danger">*</span></label>
+            <input type="text" name="subjek" class="form-control form-control-lg bg-light" id="subjek" placeholder="Contoh: Info PPDB, Kerjasama, dll." required>
+        </div>
+        
+        <div class="col-12">
+            <label for="pesan" class="form-label fw-semibold text-dark">Isi Pesan <span class="text-danger">*</span></label>
+            <textarea name="pesan" class="form-control form-control-lg bg-light" id="pesan" rows="5" placeholder="Tuliskan pertanyaan atau pesan Anda di sini..." required></textarea>
+        </div>
+        
+        <div class="col-12 mt-4">
+            <button type="submit" class="btn btn-primary-custom btn-lg w-100 fw-bold">
+                <i class="bi bi-send-fill me-2"></i> Kirim Pesan Sekarang
+            </button>
+        </div>
+    </div>
+</form>
                         <!-- Form selesai -->
                     </div>
                 </div>
