@@ -1,0 +1,224 @@
+:root {
+  --fr-border: rgba(51, 104, 160, 0.14);
+  --fr-soft: #f7fbfd;
+}
+
+.fr-page-hero {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--primary-color), #1a3959);
+  color: var(--white);
+}
+
+.fr-page-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(18, 44, 71, 0.62), rgba(51, 104, 160, 0.14));
+  pointer-events: none;
+}
+
+.fr-page-hero > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.fr-eyebrow {
+  color: var(--accent-color);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.fr-section-heading {
+  max-width: 720px;
+}
+
+.fr-section-heading p,
+.fr-muted {
+  color: var(--text-muted);
+}
+
+.fr-panel,
+.fr-info-card,
+.fr-news-card,
+.fr-gallery-item {
+  border: 1px solid var(--fr-border);
+  border-radius: 12px;
+  background: var(--white);
+  box-shadow: 0 6px 18px rgba(18, 44, 71, 0.06);
+}
+
+.fr-panel {
+  padding: 1.5rem;
+}
+
+.fr-info-card {
+  height: 100%;
+  padding: 1.4rem;
+}
+
+.fr-info-card .fr-icon {
+  display: inline-flex;
+  width: 46px;
+  height: 46px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  background: var(--accent-color);
+  color: var(--primary-color);
+  font-size: 1.35rem;
+}
+
+.fr-table thead th {
+  background: var(--primary-color);
+  color: var(--white);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.fr-table tbody tr:nth-child(even) {
+  background: var(--fr-soft);
+}
+
+.fr-timeline {
+  display: grid;
+  gap: 1rem;
+}
+
+.fr-timeline-item {
+  position: relative;
+  padding: 1rem 1rem 1rem 3.2rem;
+  border-left: 3px solid var(--secondary-color);
+  background: var(--fr-soft);
+}
+
+.fr-timeline-item::before {
+  content: "";
+  position: absolute;
+  top: 1.2rem;
+  left: -0.58rem;
+  width: 1rem;
+  height: 1rem;
+  border: 3px solid var(--white);
+  border-radius: 50%;
+  background: var(--primary-color);
+  box-shadow: 0 0 0 1px var(--primary-color);
+}
+
+.fr-step-number {
+  display: inline-flex;
+  width: 2.25rem;
+  height: 2.25rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--primary-color);
+  color: var(--white);
+  font-weight: 700;
+}
+
+.fr-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.fr-filter-bar .form-control,
+.fr-filter-bar .form-select {
+  min-height: 44px;
+  border-color: var(--fr-border);
+}
+
+.fr-news-card,
+.fr-gallery-item {
+  height: 100%;
+  overflow: hidden;
+}
+
+.fr-news-card img,
+.fr-gallery-item img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+}
+
+.fr-news-card .card-body,
+.fr-gallery-item .card-body {
+  padding: 1.25rem;
+}
+
+.fr-gallery-item {
+  cursor: pointer;
+}
+
+.fr-gallery-item img {
+  transition: transform 0.3s ease;
+}
+
+.fr-gallery-item:hover img {
+  transform: scale(1.04);
+}
+
+.fr-gallery-item:focus-visible {
+  outline: 3px solid var(--highlight-color);
+  outline-offset: 3px;
+}
+
+.fr-faq .accordion-button {
+  color: var(--text-dark);
+  font-weight: 700;
+}
+
+.fr-faq .accordion-button:not(.collapsed) {
+  background: var(--accent-color);
+  color: var(--primary-color);
+  box-shadow: none;
+}
+
+.fr-faq .accordion-button:focus {
+  box-shadow: 0 0 0 0.2rem rgba(51, 104, 160, 0.15);
+}
+
+.fr-cta {
+  background: linear-gradient(135deg, var(--primary-color), #1a3959);
+  color: var(--white);
+}
+
+.fr-cta h2,
+.fr-cta p {
+  color: var(--white);
+}
+
+.fr-empty-state {
+  grid-column: 1 / -1;
+  padding: 2.5rem 1rem;
+  border: 1px dashed var(--fr-border);
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.fr-pagination .page-link {
+  color: var(--primary-color);
+  border-color: var(--fr-border);
+}
+
+.fr-pagination .active .page-link {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--white);
+}
+
+@media (max-width: 575.98px) {
+  .fr-panel,
+  .fr-info-card {
+    padding: 1.15rem;
+  }
+
+  .fr-news-card img,
+  .fr-gallery-item img {
+    height: 185px;
+  }
+}
